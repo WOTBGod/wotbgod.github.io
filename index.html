@@ -19,6 +19,8 @@
         <a href="index.html#about">About</a>
         <a href="index.html#projects">Projects</a>
         <a href="index.html#experience">Experience</a>
+        <a href="index.html#resume">Resume</a>
+        <a href="index.html#connect">Connect</a>
       </nav>
     </header>
   </div>
@@ -29,12 +31,6 @@
       <p class="eyebrow">NYU · Economics &amp; Computer Science · Class of 2029</p>
       <h1>Hi, I'm Ethan<span class="red">.</span></h1>
       <p class="lead">I work in the increasingly blurry intersection of finance, data, and tech!</p>
-      <div class="quick-links">
-        <a href="resume.pdf" target="_blank">Resume ↗</a>
-        <a href="https://www.linkedin.com/in/ethan-mei-a862a8259/" target="_blank">LinkedIn ↗</a>
-        <a href="https://github.com/WOTBGod" target="_blank">GitHub ↗</a>
-        <a href="mailto:ethanmei61@gmail.com">Email ↗</a>
-      </div>
     </section>
 
     
@@ -44,6 +40,14 @@
         <div class="drawer">
           <div class="drawer-back"></div>
 
+          <button class="f-in connect" data-open="connect" aria-label="Open Connect with me folder">
+            <span class="f-body"></span><span class="f-tab"><span>Connect</span></span>
+            <span class="peek">click to open</span>
+          </button>
+          <button class="f-in resume" data-open="resume" aria-label="Open Resume folder">
+            <span class="f-body"></span><span class="f-tab"><span>Resume</span></span>
+            <span class="peek">click to open</span>
+          </button>
           <button class="f-in exp" data-open="experience" aria-label="Open Experience folder">
             <span class="f-body"></span><span class="f-tab"><span>Experience</span></span>
             <span class="peek">click to open</span>
@@ -149,18 +153,6 @@
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p style="color:var(--muted); margin-bottom:24px">
-        The best way to reach me is by email or LinkedIn. I'm always happy to chat.
-      </p>
-      <div class="contact-grid">
-        <a class="contact-card" href="mailto:ethanmei61@gmail.com"><strong>Email</strong></a>
-        <a class="contact-card" href="https://www.linkedin.com/in/ethan-mei-a862a8259/" target="_blank"><strong>LinkedIn</strong></a>
-        <a class="contact-card" href="https://github.com/WOTBGod" target="_blank"><strong>GitHub</strong></a>
-        <a class="contact-card" href="resume.pdf" target="_blank"><strong>Resume</strong><span>Download PDF</span></a>
-      </div>
-    </section>
 
         </div>
         <div class="o-cover">About Me</div>
@@ -302,11 +294,50 @@
         <div class="o-cover">Experience</div>
       </div>
     </div>
+
+    <div class="ofolder resume" id="panel-resume" role="dialog" aria-label="Resume">
+      <div class="o-tab">Resume</div>
+      <div class="o-back">
+        <button class="close-btn" aria-label="Close folder">×</button>
+        <div class="o-paper">
+
+    <section>
+      <h1>Resume<span class="red">.</span></h1>
+      <div class="buttons" style="margin-top:14px">
+        <a class="btn primary" href="resume.pdf" download>Download PDF</a>
+        <a class="btn" href="resume.pdf" target="_blank">Open in new tab</a>
+      </div>
+      <iframe class="resume-frame" data-src="resume.pdf" title="Ethan Mei resume"></iframe>
+    </section>
+        </div>
+        <div class="o-cover">Resume</div>
+      </div>
+    </div>
+
+    <div class="ofolder connect" id="panel-connect" role="dialog" aria-label="Connect with me">
+      <div class="o-tab">Connect with me</div>
+      <div class="o-back">
+        <button class="close-btn" aria-label="Close folder">×</button>
+        <div class="o-paper">
+
+    <section>
+      <h1>Connect with me<span class="red">.</span></h1>
+      <p class="lead" style="margin-bottom:28px">The best way to reach me is by email or LinkedIn. I'm always happy to chat.</p>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:ethanmei61@gmail.com"><strong>Email</strong><span class="sub">ethanmei61@gmail.com</span></a>
+        <a class="contact-card" href="https://www.linkedin.com/in/ethan-mei-a862a8259/" target="_blank"><strong>LinkedIn</strong><span class="sub">Ethan Mei</span></a>
+        <a class="contact-card" href="https://github.com/WOTBGod" target="_blank"><strong>GitHub</strong><span class="sub">@WOTBGod</span></a>
+      </div>
+    </section>
+        </div>
+        <div class="o-cover">Connect with me</div>
+      </div>
+    </div>
   </div>
 
   <script>
     const overlay = document.getElementById('overlay');
-    const panels = ['about', 'projects', 'experience'];
+    const panels = ['about', 'projects', 'experience', 'resume', 'connect'];
 
     function openFolder(name) {
       if (!panels.includes(name)) return closeFolder(false);
@@ -314,6 +345,8 @@
       const p = document.getElementById('panel-' + name);
       void p.offsetWidth;                     // restart the opening animation
       p.classList.add('show');
+      const frame = p.querySelector('iframe[data-src]');
+      if (frame && !frame.src) frame.src = frame.dataset.src;
       overlay.classList.add('show');
       overlay.scrollTop = 0;
       document.body.classList.add('locked');
