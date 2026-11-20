@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience — Ethan Mei</title>
-  <meta name="description" content="Ethan Mei's finance, quantitative, and leadership experience.">
+  <meta name="description" content="Ethan Mei's experience timeline.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <header class="nav">
       <a href="index.html" class="logo">Ethan <span>Mei</span></a>
       <nav>
-        <a href="index.html">About</a>
+        <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="experience.html" class="active">Experience</a>
       </nav>
@@ -26,106 +26,83 @@
   <main>
 
     <section class="page-header">
-      <p class="eyebrow">Where I've worked &amp; led</p>
+      <p class="crumbs"><a href="index.html">~/ethan</a><span class="sep">/</span><span class="here">experience</span></p>
       <h1>Experience<span class="red">.</span></h1>
-      <p class="lead">Finance and quantitative work, pitching, and building organizations from scratch.</p>
+      <p class="lead">Everything I've worked on and led, from 2022 to now.</p>
     </section>
 
-    <!-- FINANCE & QUANT -->
     <section>
-      <h2>Finance &amp; Quantitative</h2>
-
-      <div class="item">
-        <div class="item-head">
-          <h3>Retail REIT Submarket Expansion Model</h3>
-          <span>Jun 2026 – Present</span>
+      <div class="timeline-controls">
+        <span class="hint">Scroll sideways or use the arrows →</span>
+        <div class="arrows">
+          <button class="arrow" id="prev" aria-label="Earlier">←</button>
+          <button class="arrow" id="next" aria-label="Later">→</button>
         </div>
-        <p class="role">Independent Researcher</p>
-        <ul>
-          <li>Analyzed Federal Realty Investment Trust (FRT) and built a proprietary dataset of all 107 portfolio properties from the FY2025 10-K.</li>
-          <li>Scored ~1,400 ZIP-code-level submarkets on expansion fit by joining Census demographic and economic data.</li>
-          <li>Excluded property-level operating metrics (rent, occupancy) to prevent target leakage and keep the rationale interpretable.</li>
-        </ul>
       </div>
-
-      <div class="item">
-        <div class="item-head">
-          <h3>Wall Street Prep</h3>
-          <span>Jun – Aug 2026</span>
+      <div class="timeline" id="timeline">
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Sep 2022</span>
+          <div class="t-card">
+            <span class="t-tag">Pitching</span>
+            <h3>Corporate Strategy Pitches (TKS)</h3>
+            <p class="role">Finalist</p>
+            <ul><li>Finalist out of 25 teams with a Gen Z engagement strategy for Alexa, pitched in person to Amazon.</li><li>Finalist out of 25 teams with a gamified shopping concept, pitched to a Walmart VP.</li></ul>
+          </div>
         </div>
-        <p class="role">Self-Study Certification</p>
-        <ul>
-          <li>Completed the accounting, financial statement modeling, and DCF modeling modules, and built three-statement and DCF models in Excel.</li>
-        </ul>
-      </div>
-
-      <div class="item">
-        <div class="item-head">
-          <h3>Personal Investing</h3>
-          <span>Jun 2024 – Present</span>
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Dec 2022</span>
+          <div class="t-card">
+            <span class="t-tag">Startup</span>
+            <h3>PocDoc</h3>
+            <p class="role">Co-Founder</p>
+            <ul><li>Won Audience Favorite out of 20 teams at TKS Moonshot.</li><li>Built the prototype with GPT-3.5 and a custom computer vision model.</li></ul>
+          </div>
         </div>
-        <p class="role">Self-Directed</p>
-        <ul>
-          <li>Manage a portfolio of individual equities and sector ETFs (financials, energy, utilities, semiconductors), forming sector-level theses and tracking positions actively.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- PITCHING -->
-    <section>
-      <h2>Pitching &amp; Business Development</h2>
-
-      <div class="item">
-        <div class="item-head">
-          <h3>EduAI Empowerment LLC</h3>
-          <span>Mar 2024 – Jun 2026</span>
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Mar 2024</span>
+          <div class="t-card">
+            <span class="t-tag">Startup</span>
+            <h3>EduAI Empowerment LLC</h3>
+            <p class="role">Founder</p>
+            <ul><li>8 workshops at 8 schools on 3 continents, reaching 100+ teachers.</li><li>Designed a curriculum educators deliver on their own.</li></ul>
+          </div>
         </div>
-        <p class="role">Founder</p>
-        <ul>
-          <li>Founded and incorporated an education venture that hosted 8 workshops at 8 schools on 3 continents, reaching 100+ teachers through direct outreach.</li>
-          <li>Designed a curriculum educators deliver on their own, so the program scales beyond the founder.</li>
-        </ul>
-      </div>
-
-      <div class="item">
-        <div class="item-head">
-          <h3>Corporate Strategy Pitches (TKS)</h3>
-          <span>Sep 2022 – Jun 2024</span>
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Jun 2024</span>
+          <div class="t-card">
+            <span class="t-tag">Finance</span>
+            <h3>Personal Investing</h3>
+            <p class="role">Self-Directed</p>
+            <ul><li>Portfolio of individual equities and sector ETFs (financials, energy, utilities, semiconductors).</li><li>Form sector-level theses and track positions actively.</li></ul>
+          </div>
         </div>
-        <p class="role">Finalist</p>
-        <ul>
-          <li>Reached the finals out of 25 teams with a Gen Z engagement strategy for Alexa, pitched in person to Amazon representatives.</li>
-          <li>Selected as a finalist out of 25 teams for a gamified shopping concept, pitched to a Walmart VP.</li>
-        </ul>
-      </div>
-
-      <div class="item">
-        <div class="item-head">
-          <h3>PocDoc</h3>
-          <span>Dec 2022 – Sep 2023</span>
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Aug 2024</span>
+          <div class="t-card">
+            <span class="t-tag">Leadership</span>
+            <h3>AI4ALL Club</h3>
+            <p class="role">Founder &amp; President</p>
+            <ul><li>Launched my high school's first AI club and grew it to 20+ active members.</li><li>Took members from zero to building working models, and ran hackathons.</li></ul>
+          </div>
         </div>
-        <p class="role">Co-Founder</p>
-        <ul>
-          <li>Won Audience Favorite out of 20 teams at TKS Moonshot, pitching an AI app that estimates injury severity.</li>
-          <li>Built the prototype using GPT-3.5 and a custom computer vision model.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- LEADERSHIP -->
-    <section>
-      <h2>Leadership</h2>
-
-      <div class="item">
-        <div class="item-head">
-          <h3>AI4ALL Club</h3>
-          <span>Aug 2024 – Jun 2026</span>
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Jun 2026</span>
+          <div class="t-card">
+            <span class="t-tag">Finance</span>
+            <h3>Wall Street Prep</h3>
+            <p class="role">Self-Study Certification</p>
+            <ul><li>Accounting, financial statement modeling, and DCF modules.</li><li>Built three-statement and DCF models in Excel.</li></ul>
+          </div>
         </div>
-        <p class="role">Founder &amp; President</p>
-        <ul>
-          <li>Launched my high school's first AI club and grew it to 20+ active members, running weekly sessions and hackathons.</li>
-          <li>Led a technical curriculum that took members from zero to building working models.</li>
-        </ul>
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Jun 2026</span>
+          <div class="t-card">
+            <span class="t-tag">Finance · Data</span>
+            <h3>Retail REIT Expansion Model</h3>
+            <p class="role">Independent Researcher</p>
+            <ul><li>Built a dataset of all 107 FRT properties from the FY2025 10-K.</li><li>Scored ~1,400 ZIP-code submarkets on expansion fit with Census data.</li></ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -135,5 +112,11 @@
     <p>© 2026 Ethan Mei</p>
   </footer>
 
+  <script>
+    const tl = document.getElementById('timeline');
+    const step = () => tl.querySelector('.t-item').offsetWidth + 24;
+    document.getElementById('prev').onclick = () => tl.scrollBy({ left: -step() });
+    document.getElementById('next').onclick = () => tl.scrollBy({ left: step() });
+  </script>
 </body>
 </html>
