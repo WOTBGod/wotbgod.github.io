@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethan Mei</title>
+  <meta name="description" content="Ethan Mei — Economics & Computer Science at NYU. Finance, data, and tech.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="nav-wrap">
+    <header class="nav">
+      <a href="index.html" class="logo">Ethan <span>Mei</span></a>
+      <nav>
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#resume">Resume</a>
+        <a href="index.html#connect">Connect</a>
+      </nav>
+    </header>
+  </div>
+
+  <main>
+
+    <section class="hero">
+      <p class="eyebrow">NYU · Economics &amp; Computer Science · Class of 2029</p>
+      <h1>Hi, I'm Ethan<span class="red">.</span></h1>
+      <p class="lead">I work in the increasingly blurry intersection of finance, data, and tech!</p>
+    </section>
+
+    
+    <section class="cabinet-section">
+      <p class="cabinet-hint">Pull a file from the drawer ↓</p>
+      <div class="cabinet">
+        <div class="drawer">
+          <div class="drawer-back"></div>
+
+          <button class="f-in connect" data-open="connect" aria-label="Open Connect with me folder">
+            <span class="f-body"></span><span class="f-tab"><span>Connect</span></span>
+            <span class="peek">click to open</span>
+          </button>
+          <button class="f-in resume" data-open="resume" aria-label="Open Resume folder">
+            <span class="f-body"></span><span class="f-tab"><span>Resume</span></span>
+            <span class="peek">click to open</span>
+          </button>
+          <button class="f-in exp" data-open="experience" aria-label="Open Experience folder">
+            <span class="f-body"></span><span class="f-tab"><span>Experience</span></span>
+            <span class="peek">click to open</span>
+          </button>
+          <button class="f-in proj" data-open="projects" aria-label="Open Projects folder">
+            <span class="f-body"></span><span class="f-tab"><span>Projects</span></span>
+            <span class="peek">click to open</span>
+          </button>
+          <button class="f-in about" data-open="about" aria-label="Open About Me folder">
+            <span class="f-body"></span><span class="f-tab"><span>About Me</span></span>
+            <span class="peek">click to open</span>
+          </button>
+
+          <div class="drawer-front">
+            <div class="label-holder"><span>E. MEI</span></div>
+            <div class="handle"></div>
+          </div>
+        </div>
+        <div class="cabinet-body">
+          <div class="closed-drawer">
+            <div class="label-holder"><span>ARCHIVE</span></div>
+            <div class="handle"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Ethan Mei</p>
+  </footer>
+
+  <div class="overlay" id="overlay">
+    <div class="scrim"></div>
+
+    <div class="ofolder about" id="panel-about" role="dialog" aria-label="About Me">
+      <div class="o-tab">About Me</div>
+      <div class="o-back">
+        <button class="close-btn" aria-label="Close folder">×</button>
+        <div class="o-paper">
+
+    <section >
+      <h1>About Me<span class="red">.</span></h1>
+    </section>
+
+    <section id="about">
+      <p>
+        I'm a sophomore at NYU's College of Arts and Science studying Economics &amp; Computer
+        Science. I'm originally from the D.C. area, but I call Toronto, Canada home.
+      </p>
+      <p>
+        I love working on problems that need both a financial and a technical lens. That means
+        building datasets from 10-Ks, modeling in Excel and Python, and turning the results into
+        a clear investment case.
+      </p>
+      <p>
+        I've also spent years on the entrepreneurial side. I founded an AI education venture that
+        reached 100+ teachers across 3 continents, and I've pitched business strategies to
+        representatives from Amazon and Walmart.
+      </p>
+      <p>
+        I'm not just a CS and finance nerd! I've been boxing for 4 years, and I love playing the
+        violin, lifting, cooking, and watching way too much Formula 1 (go Red Bull).
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Education &amp; Skills</h2>
+
+      <div class="item">
+        <div class="item-head">
+          <h3>New York University, College of Arts and Science</h3>
+          <span>Graduating May 2029</span>
+        </div>
+        <p class="role">B.A. Computer Science &amp; Economics</p>
+        <p>Coursework: Data Structures, Calculus II</p>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><h3>Languages &amp; Libraries</h3></div>
+        <ul class="tags" style="margin-top:10px">
+          <li>Python</li><li>Java</li><li>SQL</li>
+          <li>Pandas</li><li>XGBoost</li><li>PyTorch</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><h3>Finance &amp; Machine Learning</h3></div>
+        <ul class="tags" style="margin-top:10px">
+          <li>Excel financial modeling</li><li>DCF</li><li>Three-statement models</li>
+          <li>Supervised learning</li><li>Gradient-boosted trees</li>
+          <li>Model evaluation (AUC)</li><li>Computer vision</li><li>Statistics</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-head"><h3>Certifications</h3></div>
+        <p style="margin-top:6px">
+          Supervised Machine Learning: Regression and Classification (Coursera) ·
+          Wall Street Prep (accounting, financial statement modeling, DCF)
+        </p>
+      </div>
+    </section>
+
+
+        </div>
+        <div class="o-cover">About Me</div>
+      </div>
+    </div>
+
+    <div class="ofolder proj" id="panel-projects" role="dialog" aria-label="Projects">
+      <div class="o-tab">Projects</div>
+      <div class="o-back">
+        <button class="close-btn" aria-label="Close folder">×</button>
+        <div class="o-paper">
+
+    <section >
+      <h1>Projects<span class="red">.</span></h1>
+      <p class="lead">Pick a file to open it.</p>
+    </section>
+
+    <section>
+      <div class="files">
+        <a class="file" href="project-reit.html">
+          <span class="fname">reit_expansion_model</span>
+          <h3>Retail REIT Submarket Expansion Model</h3>
+          <p>Where should Federal Realty expand next? Scored ~1,400 U.S. submarkets using 10-K and Census data.</p>
+          <span class="open">Open file →</span>
+        </a>
+        <a class="file" href="project-pocdoc.html">
+          <span class="fname">pocdoc</span>
+          <h3>PocDoc</h3>
+          <p>An AI app that estimates injury severity. Won Audience Favorite at TKS Moonshot.</p>
+          <span class="open">Open file →</span>
+        </a>
+        <a class="file" href="project-dcf.html">
+          <span class="fname">three_statement_and_dcf</span>
+          <h3>Three-Statement &amp; DCF Models</h3>
+          <p>Three-statement and DCF models built in Excel through Wall Street Prep.</p>
+          <span class="open">Open file →</span>
+        </a>
+        <a class="file" href="project-eduai.html">
+          <span class="fname">eduai_empowerment</span>
+          <h3>EduAI Empowerment</h3>
+          <p>An AI education venture: 8 workshops, 8 schools, 3 continents, 100+ teachers.</p>
+          <span class="open">Open file →</span>
+        </a>
+      </div>
+    </section>
+
+        </div>
+        <div class="o-cover">Projects</div>
+      </div>
+    </div>
+
+    <div class="ofolder exp" id="panel-experience" role="dialog" aria-label="Experience">
+      <div class="o-tab">Experience</div>
+      <div class="o-back">
+        <button class="close-btn" aria-label="Close folder">×</button>
+        <div class="o-paper">
+
+    <section >
+      <h1>Experience<span class="red">.</span></h1>
+      <p class="lead">Everything I've worked on and led, from 2022 to now.</p>
+    </section>
+
+    <section>
+      <div class="timeline-controls">
+        <span class="hint">Scroll sideways or use the arrows →</span>
+        <div class="arrows">
+          <button class="arrow" id="prev" aria-label="Earlier">←</button>
+          <button class="arrow" id="next" aria-label="Later">→</button>
+        </div>
+      </div>
+      <div class="timeline" id="timeline">
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Sep 2022</span>
+          <div class="t-card">
+            <span class="t-tag">Pitching</span>
+            <h3>Corporate Strategy Pitches (TKS)</h3>
+            <p class="role">Finalist</p>
+            <ul><li>Finalist out of 25 teams with a Gen Z engagement strategy for Alexa, pitched in person to Amazon.</li><li>Finalist out of 25 teams with a gamified shopping concept, pitched to a Walmart VP.</li></ul>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Dec 2022</span>
+          <div class="t-card">
+            <span class="t-tag">Startup</span>
+            <h3>PocDoc</h3>
+            <p class="role">Co-Founder</p>
+            <ul><li>Won Audience Favorite out of 20 teams at TKS Moonshot.</li><li>Built the prototype with GPT-3.5 and a custom computer vision model.</li></ul>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Mar 2024</span>
+          <div class="t-card">
+            <span class="t-tag">Startup</span>
+            <h3>EduAI Empowerment LLC</h3>
+            <p class="role">Founder</p>
+            <ul><li>8 workshops at 8 schools on 3 continents, reaching 100+ teachers.</li><li>Designed a curriculum educators deliver on their own.</li></ul>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Jun 2024</span>
+          <div class="t-card">
+            <span class="t-tag">Finance</span>
+            <h3>Personal Investing</h3>
+            <p class="role">Self-Directed</p>
+            <ul><li>Portfolio of individual equities and sector ETFs (financials, energy, utilities, semiconductors).</li><li>Form sector-level theses and track positions actively.</li></ul>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Aug 2024</span>
+          <div class="t-card">
+            <span class="t-tag">Leadership</span>
+            <h3>AI4ALL Club</h3>
+            <p class="role">Founder &amp; President</p>
+            <ul><li>Launched my high school's first AI club and grew it to 20+ active members.</li><li>Took members from zero to building working models, and ran hackathons.</li></ul>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Jun 2026</span>
+          <div class="t-card">
+            <span class="t-tag">Finance</span>
+            <h3>Wall Street Prep</h3>
+            <p class="role">Self-Study Certification</p>
+            <ul><li>Accounting, financial statement modeling, and DCF modules.</li><li>Built three-statement and DCF models in Excel.</li></ul>
+          </div>
+        </div>
+        <div class="t-item">
+          <span class="t-dot"></span><span class="t-date">Jun 2026</span>
+          <div class="t-card">
+            <span class="t-tag">Finance · Data</span>
+            <h3>Retail REIT Expansion Model</h3>
+            <p class="role">Independent Researcher</p>
+            <ul><li>Built a dataset of all 107 FRT properties from the FY2025 10-K.</li><li>Scored ~1,400 ZIP-code submarkets on expansion fit with Census data.</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        </div>
+        <div class="o-cover">Experience</div>
+      </div>
+    </div>
+
+    <div class="ofolder resume" id="panel-resume" role="dialog" aria-label="Resume">
+      <div class="o-tab">Resume</div>
+      <div class="o-back">
+        <button class="close-btn" aria-label="Close folder">×</button>
+        <div class="o-paper">
+
+    <section>
+      <h1>Resume<span class="red">.</span></h1>
+      <div class="buttons" style="margin-top:14px">
+        <a class="btn primary" href="resume.pdf" download>Download PDF</a>
+        <a class="btn" href="resume.pdf" target="_blank">Open in new tab</a>
+      </div>
+      <iframe class="resume-frame" data-src="resume.pdf" title="Ethan Mei resume"></iframe>
+    </section>
+        </div>
+        <div class="o-cover">Resume</div>
+      </div>
+    </div>
+
+    <div class="ofolder connect" id="panel-connect" role="dialog" aria-label="Connect with me">
+      <div class="o-tab">Connect with me</div>
+      <div class="o-back">
+        <button class="close-btn" aria-label="Close folder">×</button>
+        <div class="o-paper">
+
+    <section>
+      <h1>Connect with me<span class="red">.</span></h1>
+      <p class="lead" style="margin-bottom:28px">The best way to reach me is by email or LinkedIn. I'm always happy to chat.</p>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:ethanmei61@gmail.com"><strong>Email</strong><span class="sub">ethanmei61@gmail.com</span></a>
+        <a class="contact-card" href="https://www.linkedin.com/in/ethan-mei-a862a8259/" target="_blank"><strong>LinkedIn</strong><span class="sub">Ethan Mei</span></a>
+        <a class="contact-card" href="https://github.com/WOTBGod" target="_blank"><strong>GitHub</strong><span class="sub">@WOTBGod</span></a>
+      </div>
+    </section>
+        </div>
+        <div class="o-cover">Connect with me</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const overlay = document.getElementById('overlay');
+    const panels = ['about', 'projects', 'experience', 'resume', 'connect'];
+
+    function openFolder(name) {
+      if (!panels.includes(name)) return closeFolder(false);
+      document.querySelectorAll('.ofolder').forEach(p => p.classList.remove('show'));
+      const p = document.getElementById('panel-' + name);
+      void p.offsetWidth;                     // restart the opening animation
+      p.classList.add('show');
+      const frame = p.querySelector('iframe[data-src]');
+      if (frame && !frame.src) frame.src = frame.dataset.src;
+      overlay.classList.add('show');
+      overlay.scrollTop = 0;
+      document.body.classList.add('locked');
+      if (location.hash !== '#' + name) history.replaceState(null, '', '#' + name);
+    }
+    function closeFolder(updateUrl = true) {
+      overlay.classList.remove('show');
+      document.querySelectorAll('.ofolder').forEach(p => p.classList.remove('show'));
+      document.body.classList.remove('locked');
+      if (updateUrl) history.replaceState(null, '', location.pathname);
+    }
+
+    document.querySelectorAll('[data-open]').forEach(b =>
+      b.addEventListener('click', () => openFolder(b.dataset.open)));
+    document.querySelectorAll('.close-btn, .scrim').forEach(b =>
+      b.addEventListener('click', () => closeFolder()));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeFolder(); });
+
+    // nav links (index.html#about etc.) open the matching folder
+    window.addEventListener('hashchange', () => openFolder(location.hash.slice(1)));
+    if (location.hash) openFolder(location.hash.slice(1));
+
+    // experience timeline arrows
+    const tl = document.getElementById('timeline');
+    const step = () => tl.querySelector('.t-item').offsetWidth + 24;
+    document.getElementById('prev').onclick = () => tl.scrollBy({ left: -step() });
+    document.getElementById('next').onclick = () => tl.scrollBy({ left: step() });
+  </script>
+</body>
+</html>
