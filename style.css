@@ -53,8 +53,7 @@ p + p { margin-top: 12px; }
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(250, 248, 243, 0.9);
-  backdrop-filter: blur(8px);
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
 }
 .nav {
@@ -381,6 +380,8 @@ footer {
   --fold-about: #d5e8d9;
   --fold-proj: #efe6c8;
   --fold-exp: #cfe3dc;
+  --fold-resume: #e6ecd6;
+  --fold-connect: #dcebe0;
 }
 
 .cabinet-section { padding-top: 24px; }
@@ -394,18 +395,18 @@ footer {
 .cabinet {
   max-width: 620px;
   margin: 0 auto;
-  filter: drop-shadow(0 18px 30px rgba(47, 58, 51, 0.15));
+
 }
 
 /* ----- the pulled-out drawer ----- */
 .drawer {
   position: relative;
-  height: 360px;
+  height: 440px;
 }
 .drawer-back {           /* dark inside of the drawer, in slight perspective */
   position: absolute;
   left: 3%; right: 3%;
-  top: 40px; bottom: 120px;
+  top: 62px; bottom: 120px;
   background: linear-gradient(#7f8f84, #a6b4aa);
   clip-path: polygon(5% 0, 95% 0, 100% 100%, 0 100%);
   border-radius: 4px;
@@ -416,9 +417,9 @@ footer {
   --c: var(--fold-about);
   --lift: 0px;
   position: absolute;
-  left: 8%; right: 8%;
+  left: 5%; right: 5%;
   height: 190px;
-  bottom: calc(96px + var(--depth) * 34px);
+  bottom: calc(96px + var(--depth) * 28px);
   border: none;
   background: none;
   padding: 0;
@@ -438,7 +439,7 @@ footer {
   position: absolute;
   bottom: 100%;
   left: var(--tab-x);
-  width: 30%;
+  width: 20%;
   height: 34px;
   background: var(--c);
   border-radius: 8px 8px 0 0;
@@ -446,10 +447,10 @@ footer {
   align-items: center;
   justify-content: center;
   font-family: var(--label-font);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
+  white-space: nowrap;
   color: var(--text);
-  letter-spacing: 0.02em;
-  box-shadow: 0 -4px 10px rgba(47,58,51,0.08);
+  box-shadow: 0 -3px 6px rgba(47,58,51,0.08);
 }
 .f-in .f-tab::after {     /* little white label sticker */
   content: "";
@@ -461,16 +462,18 @@ footer {
 }
 .f-in .f-tab span { position: relative; z-index: 1; }
 
-.f-in.about { --c: var(--fold-about); --depth: 0; --tab-x: 4%;  z-index: 3; }
-.f-in.proj  { --c: var(--fold-proj);  --depth: 1; --tab-x: 35%; z-index: 2; }
-.f-in.exp   { --c: var(--fold-exp);   --depth: 2; --tab-x: 66%; z-index: 1; }
+.f-in.about   { --c: var(--fold-about);   --depth: 0; --tab-x: 1%;  z-index: 5; }
+.f-in.proj    { --c: var(--fold-proj);    --depth: 1; --tab-x: 20.5%; z-index: 4; }
+.f-in.exp     { --c: var(--fold-exp);     --depth: 2; --tab-x: 40%; z-index: 3; }
+.f-in.resume  { --c: var(--fold-resume);  --depth: 3; --tab-x: 59.5%; z-index: 2; }
+.f-in.connect { --c: var(--fold-connect); --depth: 4; --tab-x: 79%; z-index: 1; }
 
 .f-in:hover, .f-in:focus-visible { --lift: -30px; outline: none; }
 .f-in:hover .f-tab, .f-in:focus-visible .f-tab { color: var(--accent); }
 .f-in .peek {               /* "click to open" that appears on hover */
   position: absolute;
-  top: 14px; left: var(--tab-x);
-  width: 30%;
+  top: 10px; left: var(--tab-x);
+  width: 20%;
   text-align: center;
   font-size: 0.72rem;
   color: var(--muted);
@@ -482,12 +485,13 @@ footer {
 /* drawer front panel */
 .drawer-front {
   position: absolute;
+  /* shadow lives here (cheap box-shadow instead of a filter on the whole cabinet) */
   left: 0; right: 0; bottom: 0;
   height: 130px;
   z-index: 10;
   background: linear-gradient(180deg, var(--metal-hi), var(--metal) 55%, #a9b8ad);
   border-radius: 8px;
-  box-shadow: inset 0 2px 0 rgba(255,255,255,0.6), inset 0 -3px 0 rgba(0,0,0,0.08);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.6), inset 0 -3px 0 rgba(0,0,0,0.08), 0 14px 24px rgba(47,58,51,0.12);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -549,6 +553,7 @@ footer {
   position: fixed;
   inset: 0;
   z-index: 100;
+  overscroll-behavior: contain;
   display: none;
   align-items: flex-start;
   justify-content: center;
@@ -559,8 +564,7 @@ footer {
 .scrim {
   position: fixed;
   inset: 0;
-  background: rgba(47, 58, 51, 0.35);
-  backdrop-filter: blur(3px);
+  background: rgba(47, 58, 51, 0.45);
   animation: fadeIn 0.25s ease;
 }
 .ofolder {
@@ -587,10 +591,10 @@ footer {
   background: var(--c);
   border-radius: 0 12px 12px 12px;
   padding: 22px;
-  box-shadow: 0 30px 60px rgba(47,58,51,0.25);
+  box-shadow: 0 16px 32px rgba(47,58,51,0.22);
 }
 .ofolder.about { --c: var(--fold-about); --tab-x: 4%; }
-.ofolder.proj  { --c: var(--fold-proj);  --tab-x: 35%; }
+.ofolder.proj  { --c: var(--fold-proj);  --tab-x: 20%; }
 .ofolder.exp   { --c: var(--fold-exp);   --tab-x: 62%; }
 
 .o-paper {
@@ -598,8 +602,6 @@ footer {
   border-radius: 6px;
   padding: 34px 40px;
   box-shadow: 0 2px 6px rgba(47,58,51,0.10);
-  background-image: linear-gradient(transparent 31px, rgba(79,125,95,0.06) 32px);
-  background-size: 100% 32px;
 }
 .o-paper > section { padding: 28px 0; }
 .o-paper > section:first-child { padding-top: 0; }
@@ -665,3 +667,30 @@ body.locked { overflow: hidden; }
   .ofolder.show .o-cover { animation: none; display: none; }
   .ofolder.show .o-back, .ofolder.show .o-paper { animation: none; }
 }
+
+/* ---------- Resume folder ---------- */
+.resume-frame {
+  width: 100%;
+  height: 75vh;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  margin-top: 20px;
+}
+/* ---------- Connect folder ---------- */
+.contact-card .sub { display: block; color: var(--muted); font-size: 0.85rem; word-break: break-all; }
+
+@media (max-width: 600px) {
+  .drawer { height: 400px; }
+  .f-in .f-tab { font-size: 0.56rem; width: 19.5%; letter-spacing: -0.02em; }
+  .resume-frame { height: 60vh; }
+  .nav nav a { padding: 5px 8px; margin: 0 1px; font-size: 0.82rem; }
+  .nav nav { display: flex; flex-wrap: wrap; justify-content: center; }
+}
+
+/* opened-folder colors + tab positions (match the tabs in the drawer) */
+.ofolder.about   { --c: var(--fold-about);   --tab-x: 2%; }
+.ofolder.proj    { --c: var(--fold-proj);    --tab-x: 20%; }
+.ofolder.exp     { --c: var(--fold-exp);     --tab-x: 40%; }
+.ofolder.resume  { --c: var(--fold-resume);  --tab-x: 58%; }
+.ofolder.connect { --c: var(--fold-connect); --tab-x: 70%; }
